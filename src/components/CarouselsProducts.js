@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 // import "jquery/dist/jquery.js";
 import OwlCarousel from "react-owl-carousel";
+import "./CarouselProducts.css";
 
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { Switch, Route, Link } from "react-router-dom";
 
 export default class CarouselsProducts extends Component {
   render() {
@@ -34,14 +36,17 @@ export default class CarouselsProducts extends Component {
             margin={12}
             autoplay
           >
-            <div className="p-5">
-              <img
-                className="img"
-                src={
-                  "https://static-01.daraz.com.bd/p/620d5b85a669d936605c52d918108ec7.jpg"
-                }
-              />
-            </div>
+            <Link to="/productDetails">
+              {" "}
+              <div className="p-5">
+                <img
+                  className="img"
+                  src={
+                    "https://static-01.daraz.com.bd/p/620d5b85a669d936605c52d918108ec7.jpg"
+                  }
+                />
+              </div>{" "}
+            </Link>
             <div className="p-5">
               <img
                 className="img"

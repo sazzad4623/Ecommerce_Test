@@ -5,10 +5,15 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Carousels from "./components/Carousels";
+import Footer from "./components/Footer";
 
 ReactDOM.render(
   <BrowserRouter>
+    <Navbar></Navbar>
     <App />
+    <Footer></Footer>
   </BrowserRouter>,
   document.getElementById("root")
 );

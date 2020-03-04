@@ -1,5 +1,8 @@
 import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
+
 import {
+  Container,
   Card,
   CardImg,
   CardText,
@@ -10,6 +13,10 @@ import {
   Col,
   Row
 } from "reactstrap";
+import "./CardProducts.css";
+import AllProducts from "./AllProducts";
+
+const products = [{}, {}, {}];
 
 function CardProducts() {
   return (
@@ -20,13 +27,18 @@ function CardProducts() {
             <CardBody>
               <CardTitle>Card title</CardTitle>
             </CardBody>
-            <img
-              width="100%"
-              src="https://static-01.daraz.com.bd/p/792aaf294f17020154793e5fc1299c50.jpg"
-              alt="Card image cap"
-            />
+            <Link to="/allproducts">
+              {" "}
+              <img
+                width="100%"
+                src="https://static-01.daraz.com.bd/p/792aaf294f17020154793e5fc1299c50.jpg"
+                alt="Card image cap"
+              />{" "}
+            </Link>
             <CardBody>
-              <CardLink href="#">Card Link</CardLink>
+              <CardLink>
+                <Link to="/allproducts">Card Link</Link>
+              </CardLink>
             </CardBody>
           </Card>
         </Col>
