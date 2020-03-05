@@ -9,17 +9,16 @@ import ProductDetail from "./components/ProductDetail";
 export default class Homepage extends Component {
   render() {
     return (
-      <div className="page-container">
-        <div className="content-wrap">
-          {/* <Navbar></Navbar> */}
-          <Carousels></Carousels>
-          <CardProducts />
+      <div>
+        {/* <Navbar></Navbar> */}
+        <Carousels></Carousels>
+        <CardProducts />
 
-          <CarouselsProducts />
-          <CarouselsProducts />
-        </div>
-        {/* <Footer></Footer> */}
+        <CarouselsProducts />
+        <CarouselsProducts />
       </div>
+      //   {/* <Footer></Footer> */}
+      // </div>
     );
   }
 }

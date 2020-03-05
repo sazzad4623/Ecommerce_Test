@@ -1,9 +1,16 @@
 .main-footer {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  /* position: absolute; */
   color: white;
   background-color: #142850;
   padding-top: 3em;
-  position: relative;
+  /* position: relative; */
   bottom: 0;
   width: 100%;
+}
+
+.row {
+  flex: 1;
 }
