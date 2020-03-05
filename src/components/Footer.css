@@ -1,4 +1,5 @@
 .main-footer {
+  position: fixed;
   color: white;
   background-color: #142850;
   padding-top: 3em;

@@ -10,11 +10,15 @@ import Carousels from "./components/Carousels";
 import Footer from "./components/Footer";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Navbar></Navbar>
-    <App />
-    <Footer></Footer>
-  </BrowserRouter>,
+  <div className="page-container">
+    <div className="content-wrap">
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <App />
+        <Footer></Footer>
+      </BrowserRouter>
+    </div>{" "}
+  </div>,
   document.getElementById("root")
 );
 
