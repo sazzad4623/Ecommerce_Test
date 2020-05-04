@@ -11,85 +11,88 @@ import {
   CardTitle,
   CardSubtitle,
   Col,
-  Row
+  Row,
 } from "reactstrap";
 import "./CardProducts.css";
 import AllProducts from "./AllProducts";
 
-const products = [{}, {}, {}];
+class CardProducts extends React.Component {
+  constructor(props) {
+    super();
+    this.state = {
+      sections: [
+        {
+          title: "hat",
+          imageUrl:
+            "https://static-01.daraz.com.bd/p/0aa816c14e4af8017cd76c962ec8b304.jpg",
+          id: 1,
+          productName: "che guevara cap",
+          price: "$200",
+          linkUrl: "hats",
+        },
 
-function CardProducts() {
-  return (
-    <div>
-      <Row className="mt-3">
-        <Col className="p-4" lg="3" sm="6">
-          <Card>
-            <CardBody>
-              <CardTitle>Card title</CardTitle>
-            </CardBody>
-            <Link to="/allproducts">
-              {" "}
-              <img
-                width="100%"
-                src="https://static-01.daraz.com.bd/p/792aaf294f17020154793e5fc1299c50.jpg"
-                alt="Card image cap"
-              />{" "}
-            </Link>
-            <CardBody>
-              <CardLink>
-                <Link to="/allproducts">Card Link</Link>
-              </CardLink>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col lg="3" sm="6" className="p-4">
-          <Card>
-            <CardBody>
-              <CardTitle>Card title</CardTitle>
-            </CardBody>
-            <img
-              width="100%"
-              src="https://static-01.daraz.com.bd/p/39a4fc7de605dfdde12107940688138c.jpg"
-              alt="Card image cap"
-            />
-            <CardBody>
-              <CardLink href="#">Card Link</CardLink>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col lg="3" sm="6" className="p-4">
-          <Card>
-            <CardBody>
-              <CardTitle>Card title</CardTitle>
-            </CardBody>
-            <img
-              width="100%"
-              src="https://static-01.daraz.com.bd/original/b1da75dd2b6197b5f2a849d8ffecded7.jpg"
-              alt="Card image cap"
-            />
-            <CardBody>
-              <CardLink href="#">Card Link</CardLink>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col lg="3" sm="6" className="p-4">
-          <Card>
-            <CardBody>
-              <CardTitle>Card title</CardTitle>
-            </CardBody>
-            <img
-              width="100%"
-              src="https://static-01.daraz.com.bd/p/eead65d8e52c404d8b2152f504b7126e.jpg"
-              alt="Card image cap"
-            />
-            <CardBody>
-              <CardLink href="#">Card Link</CardLink>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-    </div>
-  );
+        {
+          title: "jackets",
+          imageUrl:
+            "https://static-01.daraz.com.bd/p/b1f285cfe5186b8727ade299a160694a.jpg",
+          id: 2,
+          productName: "random blue jacket",
+          price: "$700",
+          linkUrl: "",
+        },
+        {
+          title: "sneakers",
+          imageUrl:
+            "https://static-01.daraz.com.bd/p/5392e01a9f9ee84b7a847256b6f416f9.jpg",
+          id: 3,
+          productName: "white sneakers",
+          price: "$500",
+          linkUrl: "",
+        },
+        {
+          title: "womens",
+          imageUrl:
+            "https://static-01.daraz.com.bd/p/2aadce093265bd3822b1b6af4b992a30.jpg_200x200q75-product.jpg_.webp",
+          size: "large",
+          id: 4,
+          productName: "yellow three piece",
+          price: "$1000",
+          linkUrl: "",
+        },
+        {
+          title: "mens",
+          imageUrl:
+            "https://static-01.daraz.com.bd/original/c7d9f21176d901ae1065741d2d363fad.jpg",
+          size: "large",
+
+          id: 5,
+          productName: "white hoodie",
+          price: "$500",
+          linkUrl: "",
+        },
+      ],
+    };
+  }
+  render() {
+    return (
+      <div>
+        <Row className="m-3 ">
+          {this.state.sections.map(
+            ({ title, imageUrl, id, size, productName, price }) => (
+              <Col className="p-2" lg="3" sm="6">
+                <Card>
+                  <img width="100%" src={imageUrl} alt="Card image cap" />{" "}
+                  <CardTitle className="m-1">{title}</CardTitle>
+                  <CardText className="m-1">{productName}</CardText>
+                  <CardText className="m-2">{price}</CardText>
+                </Card>
+              </Col>
+            )
+          )}
+        </Row>
+      </div>
+    );
+  }
 }
 
 export default CardProducts;

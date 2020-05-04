@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar";
 import Carousels from "./components/Carousels";
 import Footer from "./components/Footer";
 import CardProducts from "./components/CardProducts";
-import CarouselsProducts from "./components/CarouselsProducts";
 import ProductDetail from "./components/ProductDetail";
+import CarouselsProduct from "./components/carouselproducts/carouselproducts";
 
 export default class Homepage extends Component {
   render() {
@@ -13,9 +13,8 @@ export default class Homepage extends Component {
         {/* <Navbar></Navbar> */}
         <Carousels></Carousels>
         <CardProducts />
-
-        <CarouselsProducts />
-        <CarouselsProducts />
+        <CarouselsProduct />
+        <CarouselsProduct />
       </div>
       //   {/* <Footer></Footer> */}
       // </div>
