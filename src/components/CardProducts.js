@@ -74,17 +74,37 @@ class CardProducts extends React.Component {
     };
   }
   render() {
+    const mystyle = {
+      color: "#000000",
+    };
     return (
       <div>
         <Row className="m-3 ">
           {this.state.sections.map(
             ({ title, imageUrl, id, size, productName, price }) => (
               <Col className="p-2" lg="3" sm="6">
-                <Card>
+                <Card className="card">
                   <img width="100%" src={imageUrl} alt="Card image cap" />{" "}
-                  <CardTitle className="m-1">{title}</CardTitle>
-                  <CardText className="m-1">{productName}</CardText>
-                  <CardText className="m-2">{price}</CardText>
+                  <div>
+                    <CardText className="ml-2 font-weight-light">
+                      {title}
+                    </CardText>
+                  </div>
+                  <Link style={mystyle}>
+                    <div>
+                      <CardText className="ml-2 font-weight-light">
+                        {productName}
+                      </CardText>
+                    </div>{" "}
+                  </Link>
+                  <Link style={mystyle}>
+                    {" "}
+                    <diV className="pt-2">
+                      <CardText className="ml-2 font-weight-bold">
+                        {price}
+                      </CardText>
+                    </diV>
+                  </Link>
                 </Card>
               </Col>
             )
